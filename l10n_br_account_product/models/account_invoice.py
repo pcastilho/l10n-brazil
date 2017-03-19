@@ -1053,7 +1053,6 @@ class AccountInvoiceLine(models.Model):
 
         product = self.env['product.product'].browse(product_id)
         ctx.update({'fiscal_type': product.fiscal_type})
-        result['cfop_id'] = fiscal_position.cfop_id.id
 		#<BNZ - SOLUCAO CFOP MULTIPLOS>
         ##result['cfop_id'] = fiscal_position.cfop_id.id
 		if product.type == 'product' and\
