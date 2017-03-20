@@ -1036,7 +1036,7 @@ class AccountInvoiceLine(models.Model):
 
     @api.multi
     #<BNZ - SOLUCAO CFOP MULTIPLOS>
-    def _get_tax_codes(self, product_id, fiscal_position, taxes):
+    @api.depends('invoice_id.partner_id', 'invoice_id.company_id')
     #<\BNZ>
     def _get_tax_codes(self, product_id, fiscal_position, taxes):
 
