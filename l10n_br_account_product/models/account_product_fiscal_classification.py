@@ -97,7 +97,6 @@ class L10nBrTaxDefinitionTemplateModel(L10nBrTaxDefinitionTemplate):
         cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
         cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
         #<\BNZ>
-
         _sql_constraints = [
         ('l10n_br_tax_definition_template_tax_template_id_uniq', 'unique \
          (tax_template_id, fiscal_classification_id)',
