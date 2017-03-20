@@ -93,9 +93,9 @@ class L10nBrTaxDefinitionTemplateModel(L10nBrTaxDefinitionTemplate):
 		
 	#<BNZ - SOLUCAO CFOP MULTIPLOS>
 	cfop_estado_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Estado')
-    cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
-    cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
-    cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
+	cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
+	cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
+	cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
 	#<\BNZ>
 
     _sql_constraints = [
@@ -341,9 +341,9 @@ class L10nBrTaxDefinitionModel(L10nBrTaxDefinition):
 		
 	#<BNZ - SOLUCAO CFOP MULTIPLOS>
 	cfop_estado_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Estado')
-    cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
-    cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
-    cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
+	cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
+	cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
+	cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
 	#<\BNZ>
 
     _sql_constraints = [
