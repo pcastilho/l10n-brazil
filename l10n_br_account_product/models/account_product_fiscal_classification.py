@@ -90,6 +90,7 @@ class L10nBrTaxDefinitionTemplateModel(L10nBrTaxDefinitionTemplate):
         'l10n_br_account_product.ipi_guideline', string=u'Enquadramento IPI')
     tax_icms_relief_id = fields.Many2one(
         'l10n_br_account_product.icms_relief', string=u'Desoneração ICMS')
+		
 	#<BNZ - SOLUCAO CFOP MULTIPLOS>
 	cfop_estado_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Estado')
     cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
@@ -337,6 +338,7 @@ class L10nBrTaxDefinitionModel(L10nBrTaxDefinition):
         'l10n_br_account_product.ipi_guideline', string=u'Enquadramento IPI')
     tax_icms_relief_id = fields.Many2one(
         'l10n_br_account_product.icms_relief', string=u'Desoneração ICMS')
+		
 	#<BNZ - SOLUCAO CFOP MULTIPLOS>
 	cfop_estado_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Estado')
     cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
