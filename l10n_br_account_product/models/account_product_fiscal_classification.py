@@ -91,17 +91,18 @@ class L10nBrTaxDefinitionTemplateModel(L10nBrTaxDefinitionTemplate):
     tax_icms_relief_id = fields.Many2one(
         'l10n_br_account_product.icms_relief', string=u'Desoneração ICMS')
         
-        #<BNZ - SOLUCAO CFOP MULTIPLOS>
-        cfop_estado_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Estado')
-        cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
-        cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
-        cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
-        #<\BNZ>
-        _sql_constraints = [
-        ('l10n_br_tax_definition_template_tax_template_id_uniq', 'unique \
-         (tax_template_id, fiscal_classification_id)',
-         u'Imposto já existente nesta classificação fiscal!')
-        ]
+#<BNZ - SOLUCAO CFOP MULTIPLOS>
+cfop_estado_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Estado')
+cfop_outros_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Outros')
+cfop_exterior_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Exterior')
+cfop_entrada_id = fields.Many2one('l10n_br_account_product.cfop', 'CFOP Entrada')
+#<\BNZ>
+
+_sql_constraints = [
+('l10n_br_tax_definition_template_tax_template_id_uniq', 'unique \
+ (tax_template_id, fiscal_classification_id)',
+ u'Imposto já existente nesta classificação fiscal!')
+]
 
 
 class L10nBrTaxDefinitionSaleTemplate(L10nBrTaxDefinitionTemplateModel,
