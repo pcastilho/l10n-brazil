@@ -1035,9 +1035,9 @@ class AccountInvoiceLine(models.Model):
         return result
 
     @api.multi
-	#<BNZ - SOLUCAO CFOP MULTIPLOS>
-	def _get_tax_codes(self, product_id, fiscal_position, taxes):
-	#<\BNZ>
+    #<BNZ - SOLUCAO CFOP MULTIPLOS>
+    def _get_tax_codes(self, product_id, fiscal_position, taxes):
+    #<\BNZ>
     def _get_tax_codes(self, product_id, fiscal_position, taxes):
 
         result = {}
@@ -1053,9 +1053,9 @@ class AccountInvoiceLine(models.Model):
 
         product = self.env['product.product'].browse(product_id)
         ctx.update({'fiscal_type': product.fiscal_type})
-		#<BNZ - SOLUCAO CFOP MULTIPLOS>
+        #<BNZ - SOLUCAO CFOP MULTIPLOS>
         ##result['cfop_id'] = fiscal_position.cfop_id.id
-		if product.type == 'product' and\
+        if product.type == 'product' and\
             product.fiscal_classification_id.sale_tax_definition_line:
                 if fiscal_position.fiscal_category_id.journal_type in (
                 'sale', 'sale_refund'):
@@ -1082,7 +1082,7 @@ class AccountInvoiceLine(models.Model):
                         result['cfop_id'] = fiscal_position.cfop_id.id
         else:
             result['cfop_id'] = fiscal_position.cfop_id.id
-		#<\BNZ>
+        #<\BNZ>
 
         tax_codes = fiscal_position.with_context(
             ctx).map_tax_code(product_id, taxes)
@@ -1115,9 +1115,9 @@ class AccountInvoiceLine(models.Model):
             tax_ids = values.get('invoice_line_tax_id', [[6, 0, []]])[
                 0][2] or self.invoice_line_tax_id.ids
         partner_id = values.get('partner_id') or self.partner_id.id
-		#<BNZ - SOLUCAO CFOP MULTIPLOS>
-		company_id = values.get('company_id') or self.company_id.id
-		#<\BNZ>
+        #<BNZ - SOLUCAO CFOP MULTIPLOS>
+        company_id = values.get('company_id') or self.company_id.id
+        #<\BNZ>
         product_id = values.get('product_id') or self.product_id.id
         quantity = values.get('quantity') or self.quantity
         fiscal_position = values.get(
@@ -1136,10 +1136,10 @@ class AccountInvoiceLine(models.Model):
 
         if self:
             partner = self.invoice_id.partner_id
-			company = self.invoice_id.company_id
+            company = self.invoice_id.company_id
         else:
             partner = self.env['res.partner'].browse(partner_id)
-			company = self.env['res.company'].browse(company_id)
+            company = self.env['res.company'].browse(company_id)
 
         taxes = self.env['account.tax'].browse(tax_ids)
         fiscal_position = self.env['account.fiscal.position'].browse(
@@ -1155,8 +1155,8 @@ class AccountInvoiceLine(models.Model):
                 result['service_type_id'] = product.service_type_id.id
             else:
                 result['product_type'] = 'product'
-			#<BNZ - SOLUCAO CFOP MULTIPLOS>
-			if product.fiscal_type == 'product' and\
+            #<BNZ - SOLUCAO CFOP MULTIPLOS>
+            if product.fiscal_type == 'product' and\
                 product.fiscal_classification_id.sale_tax_definition_line:
                 if fiscal_position.fiscal_category_id.journal_type in (
                     'sale', 'sale_refund'):
@@ -1173,7 +1173,7 @@ class AccountInvoiceLine(models.Model):
                 else:
                     if product.fiscal_classification_id.sale_tax_definition_line[0].cfop_estado_id:
                         result['cfop_id'] = product.fiscal_classification_id.sale_tax_definition_line[0].cfop_entrada_id.id
-			#<\BNZ>
+            #<\BNZ>
             if product.fiscal_classification_id:
                 result['fiscal_classification_id'] = \
                     product.fiscal_classification_id.id

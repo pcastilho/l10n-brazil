@@ -131,7 +131,7 @@
                     <field name="tax_code_id" domain="[('domain', '=', tax_domain)]" select="1"/>
                     <field name="tax_ipi_guideline_id"/>
                     <field name="tax_icms_relief_id"/>
-					<field name="cfop_estado_id"/>
+                    <field name="cfop_estado_id"/>
                     <field name="cfop_outros_id"/>
                     <field name="cfop_exterior_id"/>
                 </form>
@@ -148,7 +148,7 @@
                     <field name="tax_code_id" domain="[('domain', '=', tax_domain)]" select="1"/>
                     <field name="tax_ipi_guideline_id"/>
                     <field name="tax_icms_relief_id"/>
-					<field name="cfop_estado_id"/>
+                    <field name="cfop_estado_id"/>
                     <field name="cfop_outros_id"/>
                     <field name="cfop_exterior_id"/>
                 </tree>
@@ -165,7 +165,7 @@
                     <field name="tax_code_id" domain="[('domain', '=', tax_domain)]" select="1"/>
                     <field name="tax_ipi_guideline_id"/>
                     <field name="tax_icms_relief_id"/>
-					<field name="cfop_estado_id"/>
+                    <field name="cfop_estado_id"/>
                     <field name="cfop_outros_id"/>
                     <field name="cfop_exterior_id"/>
                 </form>
@@ -182,7 +182,7 @@
                     <field name="tax_code_id" domain="[('domain', '=', tax_domain)]" select="1"/>
                     <field name="tax_ipi_guideline_id"/>
                     <field name="tax_icms_relief_id"/>
-					<field name="cfop_estado_id"/>
+                    <field name="cfop_estado_id"/>
                     <field name="cfop_outros_id"/>
                     <field name="cfop_exterior_id"/>
                 </tree>
